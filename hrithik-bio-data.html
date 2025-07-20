@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hrithik Gupta</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --light-bg: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 1.5rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+  
+    @media (max-width: 768px) {
+        .profile-container {
+            margin: 0; /* removes top margin on mobile */
+            border-radius: 0; /* also removes rounded edges for mobile look */
+        }
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background: var(--light-bg);
+      border-bottom: 1px solid black;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* SLIDESHOW */
+    .image-carousel {
+      position: relative;
+      max-width: 700px;
+      margin: 1rem auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 450px;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-btn:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        transition: 0.3s;
+        border-radius: 50%;  /* Makes the button circular */
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* DETAILS */
+    .details-section {
+      padding: 1.5rem;
+    }
+
+    .details-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 3px;
+      width: 100%;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .info-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      background: var(--light-bg);
+      padding: 1rem;
+      border-top: 1px solid black;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <header>
+      <h1>Hrithik Gupta</h1>
+      <p class="tagline">Salesforce Developer | Bhiwandi, Thane</p>
+    </header>
+
+    <!-- IMAGE SLIDESHOW -->
+    <div class="image-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="./img/hrithik-img1.jpg"></div>
+        <div class="carousel-slide"><img src="./img/hrithik-img2.jpg"></div>
+        <div class="carousel-slide"><img src="./img/hrithik-img3.jpg"></div>
+        <!-- <div class="carousel-slide"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ddc5ca9-8104-49c9-9b0d-f786818c18e8.png"></div>
+        <div class="carousel-slide"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cf2d5de3-6ce3-4632-bb5f-8d4f19c39bad.png"></div> -->
+      </div>
+      <button class="nav-btn prev-btn" onclick="moveSlide(-1)">❮</button>
+      <button class="nav-btn next-btn" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <!-- PERSONAL DETAILS -->
+    <div class="details-section">
+      <h2>Personal Details</h2>
+      <ul class="info-list">
+        <li><strong>Full Name:</strong> Hrithik Shivlochan Gupta</li>
+        <li><strong>Date of Birth:</strong> 14 September 2000</li>
+        <li><strong>Height:</strong> 172 cm</li>
+        <li><strong>Religion:</strong> Hindu</li>
+        <li><strong>Caste:</strong> Agrahari</li>
+        <li><strong>Native Place:</strong> Baberu, Banda, Uttar Pradesh</li>
+        <li><strong>Current Company:</strong> JForce Solution, Mumbai</li>
+        <li><strong>Education:</strong> B.Sc. in Information Technology</li>
+      </ul>
+    </div>
+
+    <!-- FAMILY DETAILS -->
+    <div class="details-section">
+      <h2>Family Details</h2>
+      <ul class="info-list">
+        <li><strong>Father:</strong> Shivlochan Gupta (Small Business)</li>
+        <li><strong>Mother:</strong> Mamta Gupta (Housewife)</li>
+        <li><strong>Brother:</strong> Piyush Gupta (MBA in Finance)</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p><strong>Mobile:</strong> +91 9766703956 | +91 8830430520</p>
+      <p><strong>Address:</strong> Subhash Nagar, Kalyan Road, Bhiwandi – 421302</p>
+    </footer>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("carousel-slide");
+
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+
+    function moveSlide(n) {
+      showSlide(slideIndex + n);
+    }
+
+    function autoSlide() {
+      moveSlide(1);
+      setTimeout(autoSlide, 3000);
+    }
+
+    showSlide(slideIndex);
+    autoSlide();
+  </script>
+</body>
+</html>
